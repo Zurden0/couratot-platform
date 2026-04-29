@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Amaranth", sans-serif;
+}
+
+div, button, body, header, main, footer, p, a {
+  display: flex;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root.theme-light-blue {
+  --main: #2563EB;
+  --body-bg: #EEF4FF;
+  --content-bg: #FFFFFF;
+  --nav-bg: var(--content-bg);
+  --footer-bg: var(--content-bg);
+  --sidebar-bg: var(--content-bg);
+  --div-border: #CBD5E1;
+
+  --p-light: #FFFFFF;
+  --p-dark: #000000;
+  --p-hover-light: #CBD5E1;
+  --p-hover-dark: #232323;
+  --p-light-sub: #475569;
+  --p-dark-sub: #353535;
+
+  --a-color: var(--main);
+  --a-hover: #1D4ED8;
+
+  --input-bg: #FFFFFF;
+  --input-border: #CBD5E1;
+  --input-placeholder: #94A3B8;
+  --input-hover-bg: #F8FAFC;
+  --input-success: #16A34A;
+  --input-fail: #DC2626;
+  --input-focus: var(--main);
+
+  --button-bg: var(--main);
+  --button-text: #FFFFFF;
+  --button-border: #1D4ED8;
+  --button-hover-bg: #1D4ED8;
+  --button-hover-text: #FFFFFF;
+  --button-hover-border: #1E40AF;
+  --button-focus-bg: #1E40AF;
+  --button-focus-text: #FFFFFF;
+  --button-success: #16A34A;
+  --button-deny: #DC2626;
+
+  --icon: #475569;
+  --icon-hover: var(--main);
+}

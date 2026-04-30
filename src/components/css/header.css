@@ -29,6 +29,8 @@
     width: 100%;
     aspect-ratio: 5/1;
     position: relative;
+    border-top: 1px solid var(--div-border);
+    border-bottom: 2px solid var(--div-border);
 }
 
 .header .banner .avatar {

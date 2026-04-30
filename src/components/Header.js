@@ -48,13 +48,14 @@ class BannerAndAvatarClass {
 const Nav = new NavClass().Nav;
 const BannerAndAvatar = new BannerAndAvatarClass("#14f1ce", "").BannerAndAvatar;
 
-const Header = () => {
+const Header = ({children}) => {
   return (
     <div className={"header"}>
       {<Nav/>}
-      {<BannerAndAvatar />}
+      {<BannerAndAvatar/>}
       <div className="profile-button-cont">
       </div>
+      {children}
     </div>
   )
 }

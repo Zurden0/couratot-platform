@@ -1,0 +1,36 @@
+.sidebar {
+    max-height: 100vh;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.sidebar .options-cont {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-option {
+    padding: 10px 15px;
+    gap: 10px;
+    align-items: center;
+}
+
+.sidebar-option svg {
+    color: var(--icon);
+}
+
+.sidebar-option p {
+    font-size: 16px;
+    color: var(--icon);
+}
+
+.sidebar-option:hover {
+    cursor: pointer;
+}
+
+.sidebar-option:hover svg,
+.sidebar-option:hover p {
+    color: #000000;
+}

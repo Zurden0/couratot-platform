@@ -1,10 +1,10 @@
 import "./css/sidebar.css";
 // импорт компонентов иконок
-import Logotype from "./icons/Logotype";
-import Home from "./icons/Home";
-import Profile from "./icons/Profile";
-import Settings from "./icons/Settings";
-import Notification from "./icons/Notification";
+import LogotypeIcon from "./icons/Logotype";
+import HomeIcon from "./icons/Home";
+import ProfileIcon from "./icons/Profile";
+import SettingsIcon from "./icons/Settings";
+import NotificationIcon from "./icons/Notification";
 
 class MiniProfileClass {
   #user_info;
@@ -53,31 +53,31 @@ class SidebarOptionClass {
 
    #options =  [
       {
-        icon: Logotype,
+        icon: LogotypeIcon,
         access: ["student", "curator", "admin"],
         name: "",
         func: this.#goto_main
       },
       {
-        icon: Home,
+        icon: HomeIcon,
         access: ["student", "curator", "admin"],
         name: "Главнаяя",
         func: this.#goto_main
       },
       {
-        icon: Profile,
+        icon: ProfileIcon,
         access: ["student", "curator", "admin"],
         name: "Профиль",
         func: this.#goto_profile
       },
       {
-        icon: Notification,
+        icon: NotificationIcon,
         access: ["student", "curator", "admin"],
         name: "Уведомления",
         func: this.#goto_notification
       },
       {
-        icon: Settings,
+        icon: SettingsIcon,
         access: ["student", "curator", "admin"],
         name: "Настройки",
         func: this.#goto_settings

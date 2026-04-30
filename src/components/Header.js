@@ -1,6 +1,9 @@
 import "./css/header.css";
+import "./css/button.css";
 import ArrowBack from "./icons/ArrowBack";
 import BurgerMenu from "./icons/BurgerMenu";
+import Edit from "./icons/Edit";
+import Button from "./Button.js";
 
 class NavClass {
   #goto_back() {
@@ -44,6 +47,9 @@ class BannerAndAvatarClass {
   }
 }
 
+function editButtonListener() {
+}
+
 // компоненты
 const Nav = new NavClass().Nav;
 const BannerAndAvatar = new BannerAndAvatarClass("#14f1ce", "").BannerAndAvatar;
@@ -54,6 +60,11 @@ const Header = ({children}) => {
       {<Nav/>}
       {<BannerAndAvatar/>}
       <div className="profile-button-cont">
+        <Button
+          icon={Edit}
+          text={"Редактировать"}
+          func={editButtonListener}
+        />
       </div>
       {children}
     </div>

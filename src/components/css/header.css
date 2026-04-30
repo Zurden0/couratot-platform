@@ -15,6 +15,7 @@
 
 .header .nav svg {
     color: var(--icon);
+    cursor: pointer;
 }
 
 .header .nav svg:hover {

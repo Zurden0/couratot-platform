@@ -17,11 +17,18 @@ html, body {
 
 body {
     justify-content: center;
+    background-color: var(--body-bg);
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.main-content {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--div-border);
 }
 
 :root.theme-light-blue {

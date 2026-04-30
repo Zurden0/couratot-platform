@@ -32,6 +32,7 @@ code {
     --footer-bg: var(--content-bg);
     --sidebar-bg: var(--content-bg);
     --div-border: #CBD5E1;
+    --div-hover: #CBD5E1;
 
     --p-light: #FFFFFF;
     --p-dark: #000000;

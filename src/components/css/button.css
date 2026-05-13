@@ -9,6 +9,7 @@
     box-shadow: 4px 2px 6px color-mix(in srgb, var(--button-bg) 20%, transparent);
     font-size: 16px;
     border-radius: 12px;
+    user-select: none;
 }
 
 .button:hover {

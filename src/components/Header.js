@@ -4,6 +4,7 @@ import ArrowBack from "./icons/ArrowBack";
 import BurgerMenu from "./icons/BurgerMenu";
 import Edit from "./icons/Edit";
 import Button from "./Button.js";
+import EditUserInfo from "./EditUserInfo";
 
 class NavClass {
   #goto_back() {
@@ -48,6 +49,9 @@ class BannerAndAvatarClass {
 }
 
 function editButtonListener() {
+  const editInfoCont = document.querySelector(".edit-user-info-cont");
+
+  editInfoCont.classList.toggle("active");
 }
 
 // компоненты
@@ -65,6 +69,7 @@ const Header = ({children}) => {
           text={"Редактировать"}
           func={editButtonListener}
         />
+        {<EditUserInfo />}
       </div>
       {children}
     </div>

@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import Content from "./components/Content";
+import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import GeneralUserInfo from "./components/GeneralUserInfo";
@@ -29,6 +30,12 @@ function ProfilePage() {
   )
 }
 
+function LoginPage() {
+  return (
+    <Login />
+  )
+}
+
 function NotFoundPage() {
   return (
     <div>404 — Страница не найдена</div>
@@ -41,6 +48,7 @@ body.render(
     <Router
       routes={{
         "/profile": <ProfilePage />,
+        "/login": <LoginPage />,
         "*": <NotFoundPage />,
       }}
     />

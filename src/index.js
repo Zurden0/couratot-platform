@@ -6,8 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import Content from "./components/Content";
 import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
-import GeneralUserInfo from "./components/GeneralUserInfo";
+import ProfileHeader from "./components/ProfileHeader";
+import ProfileGeneralUserInfo from "./components/ProfileGeneralUserInfo";
 
 import Router from "./router";
 import { navigate } from "./router";
@@ -18,13 +18,13 @@ function ProfilePage() {
     <Content>
       <Sidebar />
       <div className="main-content">
-        <Header>
-          <GeneralUserInfo
+        <ProfileHeader>
+          <ProfileGeneralUserInfo
             full_name="Герман"
             login="@german"
             bio_content="Пользователь еще не оставил информацию о себе..."
           />
-        </Header>
+        </ProfileHeader>
       </div>
     </Content>
   )

@@ -1,6 +1,6 @@
 import "./css/generaluserInfo.css"
 
-const GeneralUserInfo = ({full_name, login, bio_content}) => {
+const ProfileGeneralUserInfo = ({full_name, login, bio_content}) => {
   return (
     <div className={"general-user-info-content"}>
       <div className="full-name-and-login-cont">
@@ -15,4 +15,4 @@ const GeneralUserInfo = ({full_name, login, bio_content}) => {
   )
 }
 
-export default GeneralUserInfo;
+export default ProfileGeneralUserInfo;

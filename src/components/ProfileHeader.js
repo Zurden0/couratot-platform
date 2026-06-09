@@ -4,7 +4,7 @@ import ArrowBack from "./icons/ArrowBack";
 import BurgerMenu from "./icons/BurgerMenu";
 import Edit from "./icons/Edit";
 import Button from "./Button.js";
-import EditUserInfo from "./EditUserInfo";
+import ProfileEditUserInfo from "./ProfileEditUserInfo";
 
 class NavClass {
   #goto_back() {
@@ -58,7 +58,7 @@ function editButtonListener() {
 const Nav = new NavClass().Nav;
 const BannerAndAvatar = new BannerAndAvatarClass("#14f1ce", "").BannerAndAvatar;
 
-const Header = ({children}) => {
+const ProfileHeader = ({children}) => {
   return (
     <div className={"header"}>
       {<Nav/>}
@@ -69,11 +69,11 @@ const Header = ({children}) => {
           text={"Редактировать"}
           func={editButtonListener}
         />
-        {<EditUserInfo />}
+        {<ProfileEditUserInfo />}
       </div>
       {children}
     </div>
   )
 }
 
-export default Header;
+export default ProfileHeader;

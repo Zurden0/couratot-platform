@@ -35,9 +35,9 @@ code {
     --main: #2563EB;
     --body-bg: #EEF4FF;
     --content-bg: #FFFFFF;
-    --nav-bg: var(--content-bg);
-    --footer-bg: var(--content-bg);
-    --sidebar-bg: var(--content-bg);
+    --nav-bg: #FFFFFF;
+    --footer-bg: #FFFFFF;
+    --sidebar-bg: #FFFFFF;
     --div-border: #CBD5E1;
     --div-hover: #CBD5E1;
 
@@ -48,7 +48,7 @@ code {
     --p-light-sub: #475569;
     --p-dark-sub: #353535;
 
-    --a-color: var(--main);
+    --a-color: #2563EB;
     --a-hover: #1D4ED8;
 
     --input-bg: #FFFFFF;
@@ -57,9 +57,9 @@ code {
     --input-hover-bg: #F8FAFC;
     --input-success: #16A34A;
     --input-fail: #DC2626;
-    --input-focus: var(--main);
+    --input-focus: #2563EB;
 
-    --button-bg: var(--main);
+    --button-bg: #2563EB;
     --button-text: #FFFFFF;
     --button-border: #1D4ED8;
     --button-hover-bg: #1D4ED8;
@@ -71,5 +71,5 @@ code {
     --button-deny: #DC2626;
 
     --icon: #475569;
-    --icon-hover: var(--main);
+    --icon-hover: #2563EB;
 }

@@ -1,12 +1,11 @@
 .nav {
     gap: 8px;
     background-color: var(--content-bg);
-    width: 100%;
+    width: calc(100% - 24px);
     max-width: 1000px;
     border-radius: 12px;
     align-items: center;
-    margin: 0 12px;
-    padding: 12px 120px 12px 36px;
+    padding: 12px 96px 12px 36px;
     box-sizing: border-box;
     flex-wrap: wrap;
     position: relative;

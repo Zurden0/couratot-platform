@@ -36,11 +36,19 @@
     flex-direction: column;
 }
 
-.article-cont .date, .article-cont .creator {
+.article-cont .date, .article-cont .creator, .article-cont .end-timer {
     font-size: 14px;
     padding-top: 6px;
     padding-left: 36px;
     padding-bottom: 8px;
+}
+
+.article-cont .not-actual {
+    color: var(--button-deny);
+}
+
+.article-cont .actual {
+    color: var(--button-success);
 }
 
 .article-cont .text {

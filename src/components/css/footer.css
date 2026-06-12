@@ -1,0 +1,45 @@
+.footer {
+    width: 100%;
+    background-color: var(--content-bg);
+    justify-content: center;
+    padding: 16px 0;
+}
+
+.footer .content {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 16px;
+    flex-direction: column;
+}
+
+.footer .content a {
+    width: 25%;
+    color: var(--p-dark);
+    text-decoration: none;
+}
+
+.footer .content a:hover {
+    color: var(--main);
+    cursor: pointer;
+}
+
+.footer .row a {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+.footer .first-row {
+    width: 100%;
+}
+
+.footer .last-row {
+    width: 100%;
+    padding-top: 12px;
+    margin-top: 12px;
+    border-top: 1px solid var(--div-border);
+    justify-content: center;
+    font-size: 14px;
+    color: var(--p-light-sub);
+}

@@ -8,9 +8,15 @@ import Content from "./components/Content";
 import Login from "./components/Login";
 import ProfileHeader from "./components/ProfileHeader";
 import ProfileGeneralUserInfo from "./components/ProfileGeneralUserInfo";
-
+import Article from "./components/Article";
+import Header from "./components/Header";
 import Router from "./router";
-import { navigate } from "./router";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+
+// вспомогающие функции
+import {getArticlesData} from "./components/Article";
+
 
 function ProfilePage() {
   // сделать валидацию на авторизацию
@@ -29,9 +35,33 @@ function ProfilePage() {
   )
 }
 
+function MainPage() {
+  const articlesData = getArticlesData();
+
+  return (
+    <>
+      <Header/>
+      <Nav/>
+      <Content>
+
+        <div className="main-content">
+          {
+            articlesData.map(data =>
+              <Article
+                key={data.id}
+                articleData={data}
+              />)
+          }
+        </div>
+      </Content>
+      <Footer/>
+    </>
+  )
+}
+
 function LoginPage() {
   return (
-    <Login />
+    <Login/>
   )
 }
 
@@ -46,9 +76,10 @@ body.render(
   <React.StrictMode>
     <Router
       routes={{
-        "/profile": <ProfilePage />,
-        "/login": <LoginPage />,
-        "*": <NotFoundPage />,
+        "/profile": <ProfilePage/>,
+        "/": <MainPage/>,
+        "/login": <LoginPage/>,
+        "*": <NotFoundPage/>,
       }}
     />
   </React.StrictMode>

@@ -1,4 +1,4 @@
-import "./css/generaluserInfo.css"
+import "./css/generalUserInfo.css"
 
 const ProfileGeneralUserInfo = ({full_name, login, bio_content}) => {
   return (

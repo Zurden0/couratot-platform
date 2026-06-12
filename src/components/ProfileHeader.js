@@ -1,4 +1,4 @@
-import "./css/header.css";
+import "./css/progileHeader.css";
 import "./css/button.css";
 import ArrowBack from "./icons/ArrowBack";
 import BurgerMenu from "./icons/BurgerMenu";

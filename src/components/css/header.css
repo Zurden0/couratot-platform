@@ -1,0 +1,31 @@
+.header {
+    min-height: 65px;
+    width: 100%;
+    background-color: var(--content-bg);
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.header .content {
+    gap: 16px;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+
+.header .info-cont {
+    height: 40px;
+    flex-direction: column;
+}
+
+
+.header .info-cont .title {
+    color: var(--main);
+    font-size: 18px;
+}
+
+.header .info-cont .adress {
+    color: var(--p-light-sub);
+    font-size: 14px;
+}

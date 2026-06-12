@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
+// компоненты
 import Content from "./components/Content";
 import Login from "./components/Login";
-import Sidebar from "./components/Sidebar";
 import ProfileHeader from "./components/ProfileHeader";
 import ProfileGeneralUserInfo from "./components/ProfileGeneralUserInfo";
 
@@ -16,7 +16,6 @@ function ProfilePage() {
   // сделать валидацию на авторизацию
   return (
     <Content>
-      <Sidebar />
       <div className="main-content">
         <ProfileHeader>
           <ProfileGeneralUserInfo
@@ -54,8 +53,6 @@ body.render(
     />
   </React.StrictMode>
 );
-
-
 
 
 reportWebVitals();

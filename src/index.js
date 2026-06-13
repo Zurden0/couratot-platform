@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -13,6 +13,7 @@ import Header from "./components/Header";
 import Router from "./router";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import ArticleFilters from "./components/ArticleFilters";
 
 // вспомогающие функции
 import {getArticlesData} from "./components/Article";
@@ -36,14 +37,18 @@ function ProfilePage() {
 }
 
 function MainPage() {
-  const articlesData = getArticlesData();
+  const localArticleData = getArticlesData();
+  const [articlesData, setArticlesData] = useState(localArticleData);
 
   return (
     <>
       <Header/>
       <Nav/>
+      <ArticleFilters
+        filterArticleData={setArticlesData}
+        articlesData={localArticleData}
+      />
       <Content>
-
         <div className="main-content">
           {
             articlesData.map(data =>

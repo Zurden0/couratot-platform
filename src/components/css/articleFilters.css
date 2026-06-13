@@ -1,0 +1,36 @@
+.article-filters {
+    width: calc(100% - 24px);
+    max-width: 1000px;
+    margin: 12px;
+    border-radius: 12px;
+    background-color: var(--content-bg);
+    gap: 12px;
+    padding: 12px;
+}
+.article-filters .name, .article-filters .options {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.article-filters .options .category, .article-filters .options .sort-by {
+    gap: 16px;
+}
+
+.article-filters .options a {
+    color: var(--p-light-sub);
+    text-decoration: none;
+    font-size: 14px;
+    align-items: center;
+    user-select: none;
+}
+
+.article-filters .options a:hover {
+    color: var(--main);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.article-filters .options .selected {
+    color: var(--button-focus-bg);
+    font-size: 16px;
+}

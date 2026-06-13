@@ -36,7 +36,7 @@
     flex-direction: column;
 }
 
-.article-cont .date, .article-cont .creator, .article-cont .end-timer {
+.article-cont .creator-and-date, .article-cont .end-timer {
     font-size: 14px;
     padding-top: 6px;
     padding-left: 36px;

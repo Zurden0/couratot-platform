@@ -3,18 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-// компоненты
+// компоненты основные
 import Content from "./components/Content";
-import Login from "./components/Login";
-import Article from "./components/Article";
 import Header from "./components/Header";
 import Router from "./router";
-import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import ArticleFilters from "./components/ArticleFilters";
 
-// вспомогающие функции
+// компоненты логина
+import Login from "./components/Login";
+
+// компоненты главной страницы
+import Nav from "./components/Nav";
+import Article from "./components/Article";
+import ArticleFilters from "./components/ArticleFilters";
 import {getArticlesData} from "./components/Article";
+
+// компоненты профиля
 
 
 function ProfilePage() {
@@ -23,9 +27,7 @@ function ProfilePage() {
     <>
       <Header/>
       <Content>
-        <div className="main-content">
 
-        </div>
       </Content>
       <Footer/>
     </>

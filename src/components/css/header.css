@@ -4,9 +4,12 @@
     margin-bottom: 8px;
     align-items: center;
     padding: 12px;
+    justify-content: center;
 }
 
 .header .content {
+    max-width: 1000px;
+    width: calc(100% - 24px);
     gap: 16px;
     align-items: center;
     flex-direction: row;

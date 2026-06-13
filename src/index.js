@@ -6,8 +6,6 @@ import reportWebVitals from './reportWebVitals';
 // компоненты
 import Content from "./components/Content";
 import Login from "./components/Login";
-import ProfileHeader from "./components/ProfileHeader";
-import ProfileGeneralUserInfo from "./components/ProfileGeneralUserInfo";
 import Article from "./components/Article";
 import Header from "./components/Header";
 import Router from "./router";
@@ -22,17 +20,16 @@ import {getArticlesData} from "./components/Article";
 function ProfilePage() {
   // сделать валидацию на авторизацию
   return (
-    <Content>
-      <div className="main-content">
-        <ProfileHeader>
-          <ProfileGeneralUserInfo
-            full_name="Герман"
-            login="@german"
-            bio_content="Пользователь еще не оставил информацию о себе..."
-          />
-        </ProfileHeader>
-      </div>
-    </Content>
+    <>
+      <Header/>
+      <Content>
+        <div className="main-content">
+
+        </div>
+      </Content>
+      <Footer/>
+    </>
+
   )
 }
 

@@ -141,7 +141,7 @@ const Article = ({articleData}) => {
 
         <div className="article-information">
           {articleData.text.split("<br>").map((text, index) => (
-            <p key={index}>{text}</p>
+            <p className={"text"} key={index}>{text}</p>
           ))}
         </div>
       </div>

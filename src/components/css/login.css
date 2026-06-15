@@ -10,7 +10,7 @@
 }
 
 body:has(.login-cont) {
-    align-items: center;
+    justify-content: center;
 }
 
 .info-cont a {

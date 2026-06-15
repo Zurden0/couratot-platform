@@ -1,7 +1,6 @@
 .article-filters {
     width: calc(100% - 24px);
     max-width: 1000px;
-    margin: 12px;
     border-radius: 12px;
     background-color: var(--content-bg);
     gap: 12px;

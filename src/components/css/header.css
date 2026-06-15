@@ -1,7 +1,6 @@
 .header {
     width: 100%;
     background-color: var(--content-bg);
-    margin-bottom: 8px;
     align-items: center;
     padding: 12px;
     justify-content: center;

@@ -42,7 +42,33 @@ function MainPage() {
   return (
     <>
       <Header/>
-      <Nav/>
+      <Nav
+        navOptionsList={[
+          {
+            name: "Главная",
+            url: "/"
+          },
+          {
+            name: "Профиль",
+            url: "/profile"
+          },
+          {
+            name: "Настройки",
+            url: ""
+          },
+          {
+            name: "Группы",
+            url: ""
+          },
+          {
+            name: "Создать пост",
+            url: ""
+          },
+          {
+            name: "Администрирование",
+            url: ""
+          }
+        ]}/>
       <ArticleFilters
         filterArticleData={setArticlesData}
         articlesData={localArticleData}

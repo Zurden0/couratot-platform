@@ -1,21 +1,19 @@
 import "./css/nav.css"
 import {navigate} from "../router";
 
-const Nav = () => {
+const createNavOption = (navOption) => {
+  return (
+    <>
+      <a onClick={() => navigate(navOption.url)}>{navOption.name}</a>
+    </>
+  )
+}
+
+const Nav = ({navOptionsList}) => {
   return (
     <div className={"nav"}>
-      <a href="">Главная</a>
-      <p>•</p>
-      <a href="">Профиль</a>
-      <p>•</p>
-      <a href="">Настройки</a>
-      <p>•</p>
-      <a href="">Группы</a>
-      <p>•</p>
-      <a href="">Создать пост</a>
-      <p>•</p>
-      <a href="">Администрирование</a>
-      <a className={"login"} href="avigate('/login')">Войти</a>
+      {navOptionsList.map(element => createNavOption(element))}
+      <a className={"login"} onClick={() => navigate('/login')}>Войти</a>
     </div>
   )
 }

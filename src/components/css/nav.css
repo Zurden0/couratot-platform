@@ -1,5 +1,5 @@
 .nav {
-    gap: 8px;
+    gap: 24px;
     background-color: var(--content-bg);
     width: calc(100% - 24px);
     max-width: 1000px;

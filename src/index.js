@@ -19,15 +19,45 @@ import ArticleFilters from "./components/ArticleFilters";
 import {getArticlesData} from "./components/Article";
 
 // компоненты профиля
-
+import UserProfileCard from "./components/UserProfileCard";
+import UserProfileData from "./components/UserProfileData";
+import {getUserInfo} from "./components/UserProfileCard";
 
 function ProfilePage() {
+  const [userData, setUserData] = useState(getUserInfo())
   // сделать валидацию на авторизацию
   return (
     <>
       <Header/>
       <Content>
-
+        <UserProfileCard
+          userData={userData}
+        />
+        <Nav
+          navOptionsList={[
+            {
+              name: "Профиль",
+              url: "/profile"
+            },
+            {
+              name: "Родственики",
+              url: ""
+            },
+            {
+              name: "Зачетная книжка",
+              url: ""
+            },
+            {
+              name: "Достижения",
+              url: ""
+            },
+            {
+              name: "Выйти",
+              url: "",
+              className: "login"
+            }
+          ]}/>
+        <UserProfileData/>
       </Content>
       <Footer/>
     </>

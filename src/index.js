@@ -42,38 +42,43 @@ function MainPage() {
   return (
     <>
       <Header/>
-      <Nav
-        navOptionsList={[
-          {
-            name: "Главная",
-            url: "/"
-          },
-          {
-            name: "Профиль",
-            url: "/profile"
-          },
-          {
-            name: "Настройки",
-            url: ""
-          },
-          {
-            name: "Группы",
-            url: ""
-          },
-          {
-            name: "Создать пост",
-            url: ""
-          },
-          {
-            name: "Администрирование",
-            url: ""
-          }
-        ]}/>
-      <ArticleFilters
-        filterArticleData={setArticlesData}
-        articlesData={localArticleData}
-      />
       <Content>
+        <Nav
+          navOptionsList={[
+            {
+              name: "Главная",
+              url: "/"
+            },
+            {
+              name: "Профиль",
+              url: "/profile"
+            },
+            {
+              name: "Настройки",
+              url: ""
+            },
+            {
+              name: "Группы",
+              url: ""
+            },
+            {
+              name: "Создать пост",
+              url: ""
+            },
+            {
+              name: "Администрирование",
+              url: ""
+            },
+            {
+              name: "Войти",
+              url: "/login",
+              className: "login"
+            }
+          ]}/>
+        <ArticleFilters
+          filterArticleData={setArticlesData}
+          articlesData={localArticleData}
+        />
         <div className="main-content">
           {
             articlesData.map(data =>

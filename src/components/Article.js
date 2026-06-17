@@ -102,6 +102,7 @@ const Article = ({articleData}) => {
           }}>
             {images.map((url, index) => (
               <img
+                draggable={"false"}
                 key={index}
                 src={url}
                 alt=""/>

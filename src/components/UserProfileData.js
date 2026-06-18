@@ -16,6 +16,7 @@ export const closeEditorMod = () => {
 }
 
 export const saveInfo = () => {
+  setEditModeFunc(false);
   document.querySelector(".for-save-cont").classList.toggle("disable");
   document.querySelector(".edit-information").classList.toggle("disable");
 }

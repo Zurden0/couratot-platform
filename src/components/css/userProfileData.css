@@ -30,6 +30,10 @@
     justify-content: center;
 }
 
+.user-data-cont .input input:disabled {
+    background-color: var(--content-bg);
+}
+
 
 .user-data-cont .input label {
     font-size: 16px;

@@ -1,7 +1,9 @@
 .article-cont {
-    width: 95%;
+    width: calc(100% - 24px);
     flex-direction: column;
-    padding-bottom: 16px;
+    padding: 12px;
+    background-color: var(--content-bg);
+    border-radius: 12px;
 }
 
 .main-content:has(.article-cont) {

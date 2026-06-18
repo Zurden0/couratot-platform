@@ -10,33 +10,17 @@ export const getArticlesData = () => {
         previewImgID: 0, // номер массива
         images: ["/storage/articlesImg/salad.jpg"]
       },
-      title: "Тестовая c очень длинным названием но не более 100 символов",
-      text: "Contrary to popular belief, <br>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n",
+      title: "Готов ли ты проверить свою силу? Армрестлинг ждёт!",
+      text: "Хочешь испытать себя, почувствовать адреналин и доказать, что твоя хватка — железная? Тогда присоединяйся к нашим соревнованиям по армрестлингу!<br>" +
+        "Это шанс показать характер, силу и волю к победе. Здесь нет случайных побед — только честная борьба и чистая мощь.<br>" +
+        "Не важно, новичок ты или опытный атлет — главное, что ты готов выйти к столу и показать, на что способен.<br>" +
+        "📅 Дата: с 1 июня  <br>" +
+        "📍 Место: Уточняйте у кураторов  <br>" +
+        "⏱ Регистрация: до 24 июля" +
+        "Готов стать сильнейшим? Тогда жми на регистрацию и приходи побеждать!",
       creator: "Тучина Нина Васильевна",
-      createdAT: "2026-06-12 12:45", // "YYYY-MM-DD HH:MM"
-      endAt: "2026-06-22 22:45"
-    },
-    {
-      imgLinks: {
-        previewImgID: 0, // номер массива
-        images: ["/storage/articlesImg/salad.jpg"]
-      },
-      title: "Тестовая c очень длинным названием но не более 100 символов",
-      text: "Contrary to popular belief, <br>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n",
-      creator: "Тучина Нина Васильевна",
-      createdAT: "2026-06-12 12:45", // "YYYY-MM-DD HH:MM"
-      endAt: "2026-06-02 22:45"
-    },
-    {
-      imgLinks: {
-        previewImgID: 0, // номер массива
-        images: ["/storage/articlesImg/salad.jpg"]
-      },
-      title: "Тестовая c очень длинным названием но не более 100 символов",
-      text: "Contrary to popular belief, <br>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n",
-      creator: "Тучина Нина Васильевна",
-      createdAT: "2026-06-12 12:45", // "YYYY-MM-DD HH:MM"
-      endAt: "2026-06-16 22:45"
+      createdAT: "2026-06-01 12:00", // "YYYY-MM-DD HH:MM"
+      endAt: "2026-07-24 12:00"
     }
   ]
 }

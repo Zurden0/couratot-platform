@@ -110,7 +110,7 @@ const UserProfileData = () => {
           <label htmlFor="citizenship">Гражданство</label>
         </div>
         <div className="input">
-          <input type="text" id="workplace" placeholder='ИП "Дядя Ваня"' disabled={!editMode}/>
+          <input type="text" id="workplace" placeholder='Водитель ООО «НИВА»' disabled={!editMode}/>
           <label htmlFor="workplace">Место работы</label>
         </div>
         <div className="input">

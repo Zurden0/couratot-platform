@@ -13,7 +13,7 @@ body:has(.login-cont) {
     justify-content: center;
 }
 
-.info-cont a {
+.login-cont a {
     cursor: pointer;
     color: var(--a-color);
     text-decoration: none;

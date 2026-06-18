@@ -1,0 +1,151 @@
+.relative-data-cont {
+    width: calc(100% - 24px);
+    background-color: var(--content-bg);
+    flex-direction: column;
+    padding: 15px 25px;
+    border-radius: 12px;
+    gap: 12px;
+}
+
+.relative-data-cont .general-user-info-cont,
+.relative-data-cont .sub-info-cont,
+.relative-data-cont .sub-info-cont {
+    flex-direction: column;
+    gap: 12px;
+}
+
+.relative-data-cont.active {
+    display: flex;
+}
+
+.relative-data-cont .input {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid var(--input-border);
+    padding: 4px 0 8px 15px;
+    min-height: 56px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.relative-data-cont .input input:disabled {
+    background-color: var(--content-bg);
+}
+
+
+.relative-data-cont .input label {
+    font-size: 16px;
+    color: var(--input-placeholder);
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.relative-data-cont .input input,
+.relative-data-cont .input textarea {
+    bottom: 0;
+    padding: 0 5px;
+    font-size: 16px;
+    color: var(--p-dark);
+    border: 0;
+    height: 0;
+    outline: none;
+    cursor: pointer;
+    order: 1;
+}
+
+.relative-data-cont .input textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+.relative-data-cont .input p {
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: 1px;
+    right: 10px;
+    top: 5px;
+    user-select: none;
+    z-index: 1;
+    color: var(--input-placeholder);
+}
+
+.relative-data-cont .input input:focus,
+.relative-data-cont .input textarea:focus {
+    height: auto;
+    padding: 2px 5px;
+}
+
+.relative-data-cont .input:focus-within {
+    border-color: var(--main);
+}
+
+
+.relative-data-cont .input:focus-within label {
+    color: var(--main);
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.relative-data-cont .input:focus-within p {
+    display: flex;
+}
+
+.relative-data-cont .input input:not(:placeholder-shown),
+.relative-data-cont .input textarea:not(:placeholder-shown) {
+    height: auto;
+    padding: 2px 5px;
+}
+
+.relative-data-cont .input input:not(:placeholder-shown) + label,
+.relative-data-cont .input textarea:not(:placeholder-shown) + label {
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.relative-data-cont .title {
+    font-size: 20px;
+}
+
+.relatives-data-title {
+    margin-top: 6px;
+    width: calc(100% - 24px);
+    max-width: 1000px;
+    font-size: 18px;
+    border-radius: 12px;
+    background-color: var(--content-bg);
+    padding: 12px 24px;
+}
+
+
+.relative-data-button-cont {
+    width: calc(100% - 24px);
+    background-color: var(--content-bg);
+    flex-direction: row;
+    padding: 15px 25px;
+    border-radius: 12px;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+
+.relative-data-button-cont a {
+    background-color: var(--main);
+    padding: 12px 24px;
+    border-radius: 12px;
+    color: var(--p-light);
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.relative-data-button-cont .delete,
+.relative-data-button-cont .reset {
+    background-color: var(--button-deny);
+}
+
+.relative-data-button-cont .save {
+    background-color: var(--button-success);
+}

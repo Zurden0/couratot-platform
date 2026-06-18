@@ -1,0 +1,42 @@
+.relatives-cont {
+    width: calc(100% - 24px);
+    max-width: 1000px;
+    gap: 6px;
+    flex-direction: column;
+    background-color: var(--content-bg);
+    border-radius: 12px;
+    padding: 12px 0;
+    position: relative;
+    overflow-x: auto;
+}
+
+.relatives-cont .table {
+    min-width: 768px;
+    flex-direction: column;
+}
+
+.option, .first-option {
+    padding: 6px 24px;
+    width: 100%;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+.option:hover {
+    background-color: var(--div-hover);
+    cursor: pointer;
+}
+
+.relatives-cont .cell {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.relatives-cont .name {
+    flex: 2;
+}

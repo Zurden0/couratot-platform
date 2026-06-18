@@ -1,7 +1,6 @@
 .user-data-cont {
     width: calc(100% - 24px);
     background-color: var(--content-bg);
-    border-bottom: 1px solid var(--div-border);
     flex-direction: column;
     padding: 15px 25px;
     border-radius: 12px;

@@ -21,6 +21,8 @@ import {getArticlesData} from "./components/Article";
 // компоненты профиля
 import UserProfileCard from "./components/UserProfileCard";
 import UserProfileData from "./components/UserProfileData";
+import ProfileRelatives from "./components/ProfileRelatives";
+import RelativeProfileData from "./components/RelativeProfileData";
 import {getUserInfo} from "./components/UserProfileCard";
 
 function ProfilePage() {
@@ -41,7 +43,7 @@ function ProfilePage() {
             },
             {
               name: "Родственики",
-              url: ""
+              url: "/profile/relatives"
             },
             {
               name: "Зачетная книжка",
@@ -57,7 +59,7 @@ function ProfilePage() {
               className: "login"
             }
           ]}/>
-        <UserProfileData/>
+        {TargetMode}
       </Content>
       <Footer/>
     </>
@@ -82,10 +84,6 @@ function MainPage() {
             {
               name: "Профиль",
               url: "/profile"
-            },
-            {
-              name: "Настройки",
-              url: ""
             },
             {
               name: "Группы",
@@ -141,9 +139,12 @@ body.render(
   <React.StrictMode>
     <Router
       routes={{
-        "/profile": <ProfilePage/>,
         "/": <MainPage/>,
         "/login": <LoginPage/>,
+
+        "/profile": <ProfilePage TargetMode={<UserProfileData/>}/>,
+        "/profile/relatives": <ProfilePage TargetMode={<ProfileRelatives/>}/>,
+        "/profile/relatives/:id": <ProfilePage TargetMode={<RelativeProfileData/>}/>,
         "*": <NotFoundPage/>,
       }}
     />

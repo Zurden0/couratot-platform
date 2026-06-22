@@ -1,0 +1,72 @@
+.user-profile-card {
+    width: calc(100% - 24px);
+    max-height: 198px;
+    background-color: var(--content-bg);
+    border-radius: 12px;
+    margin-top: 8px;
+    align-items: center;
+    padding: 24px;
+    justify-content: space-between;
+}
+
+.user-profile-card .for-save-cont {
+    gap: 16px;
+}
+
+.user-profile-card .for-save-cont .save-information {
+    color: var(--button-success);
+}
+
+.user-profile-card .for-save-cont .undo-information {
+    color: var(--button-deny);
+}
+
+.user-profile-card .disable {
+    display: none;
+}
+
+.user-profile-card .avatar-cont {
+    height: 150px;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--div-border);
+    border-radius: 50%;
+}
+
+.user-profile-card .avatar-cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-profile-card .user-profile-information {
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.user-profile-card .user-profile-information .general-information {
+    gap: 4px;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.user-profile-card .user-profile-information p {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.user-profile-card .user-profile-information .login {
+    margin: 4px 0;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+.user-profile-card .user-profile-information a {
+    text-decoration: none;
+    width: auto;
+    color: var(--main);
+    cursor: pointer;
+    padding: 4px;
+    margin-left: -4px;
+}

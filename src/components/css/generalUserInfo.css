@@ -1,0 +1,40 @@
+.general-user-info-content {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 5px;
+    padding: 0 25px 10px 25px;
+    gap: 15px;
+    border-bottom: 1px solid var(--div-border);
+}
+
+.general-user-info-content .full-name-and-login-cont {
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.general-user-info-content .full-name-and-login-cont .full-name {
+    font-size: 20px;
+    color: var(--p-dark);
+}
+
+.general-user-info-content .full-name-and-login-cont .login {
+    font-size: 14px;
+    color: var(--p-dark-sub);
+}
+
+.general-user-info-content .bio {
+    padding: 10px 15px;
+    flex-direction: column;
+}
+
+.general-user-info-content .bio .title {
+    font-size: 14px;
+    color: var(--p-dark-sub);
+    padding: 0 5px;
+}
+
+.general-user-info-content .bio .content-value {
+    font-size: 16px;
+    color: var(--p-dark);
+    padding: 0 5px;
+}

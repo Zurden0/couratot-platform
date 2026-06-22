@@ -1,0 +1,114 @@
+.user-data-cont {
+    width: calc(100% - 24px);
+    background-color: var(--content-bg);
+    flex-direction: column;
+    padding: 15px 25px;
+    border-radius: 12px;
+    gap: 12px;
+}
+
+.user-data-cont .general-user-info-cont,
+.user-data-cont .sub-info-cont,
+.user-data-cont .sub-info-cont {
+    flex-direction: column;
+    gap: 12px;
+}
+
+.user-data-cont.active {
+    display: flex;
+}
+
+.user-data-cont .input {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid var(--input-border);
+    padding: 4px 0 8px 15px;
+    min-height: 56px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-data-cont .input input:disabled {
+    background-color: var(--content-bg);
+}
+
+
+.user-data-cont .input label {
+    font-size: 16px;
+    color: var(--input-placeholder);
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.user-data-cont .input input,
+.user-data-cont .input textarea {
+    bottom: 0;
+    padding: 0 5px;
+    font-size: 16px;
+    color: var(--p-dark);
+    border: 0;
+    height: 0;
+    outline: none;
+    cursor: pointer;
+    order: 1;
+}
+
+.user-data-cont .input textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+.user-data-cont .input p {
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: 1px;
+    right: 10px;
+    top: 5px;
+    user-select: none;
+    z-index: 1;
+    color: var(--input-placeholder);
+}
+
+.user-data-cont .input input:focus,
+.user-data-cont .input textarea:focus {
+    height: auto;
+    padding: 2px 5px;
+}
+
+.user-data-cont .input:focus-within {
+    border-color: var(--main);
+}
+
+
+.user-data-cont .input:focus-within label {
+    color: var(--main);
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.user-data-cont .input:focus-within p {
+    display: flex;
+}
+
+.user-data-cont .input input:not(:placeholder-shown),
+.user-data-cont .input textarea:not(:placeholder-shown) {
+    height: auto;
+    padding: 2px 5px;
+}
+
+.user-data-cont .input input:not(:placeholder-shown) + label,
+.user-data-cont .input textarea:not(:placeholder-shown) + label {
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.user-data-cont .title {
+    font-size: 20px;
+}
+
+.sub-info-cont {
+
+}

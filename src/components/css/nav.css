@@ -1,0 +1,28 @@
+.nav {
+    gap: 24px;
+    background-color: var(--content-bg);
+    width: calc(100% - 24px);
+    max-width: 1000px;
+    border-radius: 12px;
+    align-items: center;
+    padding: 12px 96px 12px 36px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.nav a {
+    font-size: 14px;
+    color: var(--main);
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nav .login {
+    position: absolute;
+    right: 42px;
+}

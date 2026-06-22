@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -6,11 +6,12 @@ import reportWebVitals from './reportWebVitals';
 // компоненты основные
 import Content from "./components/Content";
 import Header from "./components/Header";
-import Router from "./router";
+import Router, {navigate} from "./router";
 import Footer from "./components/Footer";
 
 // компоненты логина
 import Login from "./components/Login";
+import LogOut from "./components/LogOut";
 
 // компоненты главной страницы
 import Nav from "./components/Nav";
@@ -20,13 +21,41 @@ import {getArticlesData} from "./components/Article";
 
 // компоненты профиля
 import UserProfileCard from "./components/UserProfileCard";
-import UserProfileData from "./components/UserProfileData";
+import UserProfileData, {getUserData} from "./components/UserProfileData";
 import ProfileRelatives from "./components/ProfileRelatives";
-import RelativeProfileData from "./components/RelativeProfileData";
+import Achievement from "./components/Achievement";
 import {getUserInfo} from "./components/UserProfileCard";
 
-function ProfilePage() {
-  const [userData, setUserData] = useState(getUserInfo())
+// компоненты админ панели
+import AdminUsers from "./components/AdminUsers";
+import AdminGroups from "./components/AdminGroups";
+
+
+const authValidator = async () => {
+  const res = await fetch(
+    "/server/validators/getUserAuth.php", {
+      method: "GET",
+      credentials: "include"
+    }
+  );
+
+  return await res.text()
+}
+
+const roleValidator = async () => {
+  const res = await fetch(
+    "/server/validators/getUserRole.php", {
+      method: "GET",
+      credentials: "include"
+    }
+  );
+
+  return await res.text()
+}
+
+
+function ProfilePage({TargetMode}) {
+  const [userData, setUserData] = useState(getUserInfo());
   // сделать валидацию на авторизацию
   return (
     <>
@@ -46,16 +75,12 @@ function ProfilePage() {
               url: "/profile/relatives"
             },
             {
-              name: "Зачетная книжка",
-              url: ""
-            },
-            {
               name: "Достижения",
-              url: ""
+              url: "/profile/achievement"
             },
             {
               name: "Выйти",
-              url: "",
+              url: "/logout",
               className: "login"
             }
           ]}/>
@@ -67,42 +92,104 @@ function ProfilePage() {
   )
 }
 
+
+function AdminPage({TargetMode}) {
+  const [navOptionsList, setNavOption] = useState([]);
+  useEffect(() => {
+    roleValidator().then(role => {
+      if (role === "admin") {
+        setNavOption([
+          {
+            name: "Пользователи",
+            url: "/admin/users"
+          },
+          {
+            name: "Группы",
+            url: "/admin/groups"
+          }
+        ]);
+      }
+
+      if (role === "curator") {
+        setNavOption([
+          {
+            name: "Группы",
+            url: "/admin/groups"
+          }
+        ]);
+      }
+
+      if (role === "student") {
+        navigate("/");
+      }
+    });
+  }, []);
+  return (
+    <>
+      <Header/>
+      <Content>
+        <Nav navOptionsList={navOptionsList}/>
+        {TargetMode}
+      </Content>
+      <Footer/>
+    </>
+
+  )
+}
+
+
 function MainPage() {
-  const localArticleData = getArticlesData();
-  const [articlesData, setArticlesData] = useState(localArticleData);
+  const [articlesData, setArticlesData] = useState([]);
+  const [localArticleData, setLocalArticleData] = useState([]);
+  const [navOptionList, setNavOption] = useState([]);
+
+  useEffect(() => {
+    authValidator().then(text => {
+      if (!text) {
+        navigate("/login");
+        return;
+      }
+
+      roleValidator().then(role => {
+        if (role === "admin") {
+          setNavOption([
+            {name: "Главная", url: "/"},
+            {name: "Группы", url: "/admin/groups"},
+            {name: "Администрирование", url: "/admin"},
+            {name: "Выйти", url: "/logout", className: "login"}
+          ]);
+        }
+
+        if (role === "curator") {
+          setNavOption([
+            {name: "Главная", url: "/"},
+            {name: "Группы", url: "/admin/groups"},
+            {name: "Выйти", url: "/logout", className: "login"}
+          ]);
+        }
+
+        if (role === "student") {
+          setNavOption([
+            {name: "Главная", url: "/"},
+            {name: "Профиль", url: "/profile"},
+            {name: "Выйти", url: "/logout", className: "login"}
+          ]);
+        }
+      });
+    });
+
+    getArticlesData().then(data => {
+      setLocalArticleData(data);
+      setArticlesData(data);
+    });
+  }, []);
 
   return (
     <>
       <Header/>
       <Content>
         <Nav
-          navOptionsList={[
-            {
-              name: "Главная",
-              url: "/"
-            },
-            {
-              name: "Профиль",
-              url: "/profile"
-            },
-            {
-              name: "Группы",
-              url: ""
-            },
-            {
-              name: "Создать пост",
-              url: ""
-            },
-            {
-              name: "Администрирование",
-              url: ""
-            },
-            {
-              name: "Войти",
-              url: "/login",
-              className: "login"
-            }
-          ]}/>
+          navOptionsList={navOptionList}/>
         <ArticleFilters
           filterArticleData={setArticlesData}
           articlesData={localArticleData}
@@ -141,10 +228,16 @@ body.render(
       routes={{
         "/": <MainPage/>,
         "/login": <LoginPage/>,
+        "/logout": <LogOut/>,
 
         "/profile": <ProfilePage TargetMode={<UserProfileData/>}/>,
         "/profile/relatives": <ProfilePage TargetMode={<ProfileRelatives/>}/>,
-        "/profile/relatives/:id": <ProfilePage TargetMode={<RelativeProfileData/>}/>,
+        "/profile/achievement": <ProfilePage TargetMode={<Achievement/>}/>,
+
+        "/admin": <AdminPage TargetMode={<AdminUsers/>}/>,
+        "/admin/users": <AdminPage TargetMode={<AdminUsers/>}/>,
+        "/admin/groups": <AdminPage TargetMode={<AdminGroups/>}/>,
+
         "*": <NotFoundPage/>,
       }}
     />

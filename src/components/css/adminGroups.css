@@ -1,0 +1,152 @@
+.admin-group-cont {
+    width: calc(100% - 24px);
+    max-width: 1000px;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: var(--content-bg);
+    flex-direction: column;
+    overflow-x: auto;
+}
+
+.admin-group-cont .title {
+    font-size: 18px;
+    padding-bottom: 24px;
+}
+
+.admin-group-cont .table {
+    width: 100%;
+    min-width: 768px;
+    flex-direction: column;
+}
+
+.admin-group-cont .table .name {
+    width: 200px;
+}
+
+.admin-group-cont .table .curator {
+    display: flex;
+    flex: 2;
+}
+
+.admin-group-cont .table .counter {
+    width: 200px;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.admin-group-cont .table .action {
+    width: 100px;
+}
+
+.admin-group-cont .group-option {
+    border-bottom: 1px solid var(--div-border);
+    padding: 6px 0;
+    flex-direction: column;
+}
+
+.admin-group-cont .first-row {
+    flex-direction: row;
+}
+
+.admin-group-cont .group-option .metadata {
+    width: 100%;
+    padding: 6px;
+}
+
+.admin-group-cont .group-option .metadata .hidden {
+    display: none;
+}
+
+.admin-group-cont .group-option a {
+    color: var(--main);
+    cursor: pointer;
+    padding: 2px 4px;
+    align-items: center;
+    display: flex;
+}
+
+.admin-group-cont .group-option .update-curator {
+    color: var(--button-success);
+}
+
+.admin-group-cont .group-option a:hover {
+    text-decoration: underline;
+}
+
+.admin-group-cont .group-content-cont {
+    width: 100%;
+    flex-direction: column;
+}
+
+.admin-group-cont .row {
+    width: 100%;
+    align-items: center;
+    padding: 0 12px;
+    border-radius: 8px;
+}
+
+
+.admin-group-cont .student-option {
+    width: 100%;
+    padding: 6px 12px;
+}
+
+.admin-group-cont .row:hover {
+    background-color: var(--div-hover);
+}
+
+.admin-group-cont .group-content-cont .student-option {
+    height: 100%;
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.admin-group-cont .group-content-cont .go-to-profile {
+    padding: 4px 6px;
+}
+
+.admin-group-cont .input-cont {
+    justify-content: space-between;
+    padding: 6px 12px;
+}
+
+.admin-group-cont .input-cont input,
+.admin-group-cont .add-group-input-cont input {
+    border: 0;
+    padding: 2px 12px;
+    border-bottom: 1px solid var(--input-border);
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    max-width: 425px;
+    font-size: 16px;
+}
+
+.admin-group-cont .input-cont a,
+.admin-group-cont .add-group-input-cont a {
+    color: var(--p-light);
+    border-radius: 12px;
+    padding: 6px 24px;
+    background-color: var(--main);
+    cursor: pointer;
+}
+
+.admin-group-cont .input-cont a:hover {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.admin-group-cont .curator {
+    border: 0;
+    font-size: 16px;
+    outline: none;
+}
+
+.admin-group-cont .add-group-input-cont {
+    margin: 24px 0;
+    justify-content: space-between;
+}
